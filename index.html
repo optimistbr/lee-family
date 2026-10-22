@@ -42,7 +42,7 @@ button{cursor:pointer}
 .topbar .today{font-variant-numeric:tabular-nums;font-size:17px;font-weight:700;color:#2f5a72}
 
 .frame{
-  position:relative;display:grid;grid-template-columns:260px 1fr auto;gap:0;
+  position:relative;display:grid;grid-template-columns:280px 1fr auto;gap:0;
   background:var(--frame);border-radius:22px;padding:14px;
   box-shadow:0 6px 0 var(--frame-dark);
 }
@@ -50,7 +50,7 @@ button{cursor:pointer}
 .left{border-right:2px dashed var(--line);border-radius:14px 0 0 14px}
 .main{border-radius:0 14px 14px 0;min-height:560px}
 /* 스프링 고리 */
-.rings{position:absolute;left:274px;top:40px;bottom:40px;width:0;display:flex;flex-direction:column;justify-content:space-around;pointer-events:none}
+.rings{position:absolute;left:294px;top:40px;bottom:40px;width:0;display:flex;flex-direction:column;justify-content:space-around;pointer-events:none}
 .rings i{display:block;width:26px;height:10px;margin-left:-13px;border-radius:6px;background:linear-gradient(#e8eef2,#9fb0bb);box-shadow:0 1px 0 #6f8592}
 
 /* 세로 탭 */
@@ -77,13 +77,16 @@ button{cursor:pointer}
 .members div{display:flex;align-items:center;gap:8px}
 .dotc{width:10px;height:10px;border-radius:50%;flex:none}
 .book-link{
-  margin-top:18px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);
-  background:#fff7ec;border:2px dashed #ffc58f;border-radius:14px;padding:10px 12px;transition:transform .15s;
+  margin-top:18px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);
+  background:#fff7ec;border:2px dashed #ffc58f;border-radius:14px;padding:8px 10px;transition:transform .15s;
 }
 .book-link:hover{transform:translateY(-2px) rotate(-1deg)}
-.book-link svg{width:56px;height:56px;flex:none}
-.book-link b{font-family:var(--display);font-weight:400;font-size:16px;display:block;color:#e46a1c}
+.book-link svg{width:40px;height:40px;flex:none}
+.book-link b{font-family:var(--display);font-weight:400;font-size:15px;display:block;color:#e46a1c;white-space:nowrap;letter-spacing:-.2px}
 .book-link span{font-size:12px;color:var(--muted)}
+.talk-link{margin-top:10px;background:#eef7ff;border-color:#9fd2ff}
+.talk-link b{color:#2f7fc0}
+.talk-link:hover{transform:translateY(-2px) rotate(1deg)}
 
 /* 본문 공통 */
 .sec-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:8px;margin:0 0 16px}
@@ -261,7 +264,19 @@ img{max-width:100%}
       <div class="members" id="memberList"></div>
       <a class="book-link" href="https://claude.ai/artifact/LJEMG14s9EmjehHNHC5mZJ" target="_blank" rel="noopener">
         <span id="bookSmall"></span>
-        <div><b>우리집 독서 교실</b><span>책을 누르면 이동해요</span></div>
+        <div><b>우리집 독서 교실</b></div>
+      </a>
+      <a class="book-link talk-link" href="https://claude.ai/artifact/BexpNjgjmKgiFR83w7Pafb" target="_blank" rel="noopener">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M14 22 Q14 14 22 14 L72 14 Q80 14 80 22 L80 58 Q80 66 72 66 L40 66 L24 80 L26 66 L22 66 Q14 66 14 58Z" fill="#7cc6ff" stroke="#3a8fd0" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="35" cy="36" r="3.5" fill="#3a3030"/><circle cx="59" cy="36" r="3.5" fill="#3a3030"/>
+          <ellipse cx="29" cy="45" rx="4.5" ry="2.8" fill="#ffb3b3"/><ellipse cx="65" cy="45" rx="4.5" ry="2.8" fill="#ffb3b3"/>
+          <ellipse cx="47" cy="49" rx="6" ry="5" fill="#ff7a8a" stroke="#3a3030" stroke-width="2.5"/>
+          <path d="M86 30 Q92 40 86 50" fill="none" stroke="#ffb020" stroke-width="4" stroke-linecap="round"/>
+          <path d="M92 24 Q101 40 92 56" fill="none" stroke="#ffb020" stroke-width="4" stroke-linecap="round"/>
+          <path d="M70 84 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#ffd34d"/>
+        </svg>
+        <div><b>은율이의 말소리 놀이터</b></div>
       </a>
     </aside>
 
